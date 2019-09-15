@@ -15,6 +15,7 @@ import {Grid, Row, Col} from 'react-flexbox-grid';
 
 const Trip = ({
   error,
+  id,
   name,
   image,
   cost,
@@ -97,7 +98,7 @@ const Trip = ({
             <Col xs={12}>
               <PageTitle text="Trip options" />
               <OrderForm
-                tripCost={cost}
+                tripCost={cost} tripName={name} tripId={id} countryCode={country.alpha3Code}
               />
             </Col>
           </Row>
