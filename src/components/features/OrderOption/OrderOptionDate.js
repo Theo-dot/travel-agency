@@ -6,9 +6,13 @@ import PropTypes from 'prop-types';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 class OrderOptionDate extends React.Component {
-  state = {
-    startDate: new Date(),
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      startDate: new Date(),
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
   handleChange = date => {
     this.setState({
